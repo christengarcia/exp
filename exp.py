@@ -18,7 +18,7 @@ while number_of_items < items:
         try:
             item_cost = float(item_cost)
             if item_cost < 0:
-                print("%d is not positive number." % item_cost)
+                print("Please enter a positive number")
                 continue
             break
         except:
@@ -29,14 +29,22 @@ while number_of_items < items:
         try:
             items_used = int(items_used)
             if items_used < 0:
-                print("%d is not positive number." % items_used)
+                print("Please enter a positive number")
                 continue
             break
         except:
             print("Please enter an integer")
             
-    tax_deductable = input("Is this item tax deductible (Yes|No)? ")
-    tax_deductable = bool(tax_deductable)
+    tax_deductable = None  
+    
+    while tax_deductable not in ("Yes", "No"):       
+        tax_deductable = input("Is this item tax deductible (Yes|No)? ")
+        if tax_deductable == "Yes":
+            break
+        elif tax_deductable == "No":
+            break
+        else:
+            print("Please enter a Yes or No only")
        
     number_of_items = number_of_items + 1
     

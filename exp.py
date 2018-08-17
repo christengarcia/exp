@@ -5,6 +5,7 @@
 items = input("How many items do you wish to record? ")
 items = int(items)
 
+
 # loop through items
 number_of_items = 0
 
@@ -22,9 +23,18 @@ while number_of_items < items:
             break
         except:
             print("Please enter a real number")
-     
-    item_used = input('How many of this item were used? ')
-    item_used = int(item_used)
+            
+    while True:
+        items_used = input("How many items used? ")
+        try:
+            items_used = int(items_used)
+            if items_used < 0:
+                print("%d is not positive number." % items_used)
+                continue
+            break
+        except:
+            print("Please enter an integer")
+            
     tax_deductable = input("Is this item tax deductible (Yes|No)? ")
     tax_deductable = bool(tax_deductable)
        
@@ -32,3 +42,4 @@ while number_of_items < items:
     
     if number_of_items == items:
         break
+    

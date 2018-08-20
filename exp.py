@@ -51,7 +51,7 @@ def tax_deductible(question):
 items = input("How many items do you wish to record? ")
 items = int(items)    
 
-# empty expensive, item and tax list
+# empty expensive items dictionary, items and tax list
 expensive_items_list = {}
 items_list = []
 tax_list = []
@@ -59,7 +59,7 @@ tax_list = []
 # loop through number of items specified by the user
 number_of_items = 0
 while number_of_items < items:
-    print('\n')    
+    print("------------------------------------------")   
     print("Item " + str(number_of_items + 1) + ":")
     
     # call the functions with arguements and assign to new variable
@@ -93,12 +93,12 @@ while number_of_items < items:
     
 # main method to print results
 def main():
-    print("\n")
-    print("Most expensive item:    ", '$%.2f' % expensive_items_list[maximum], "Item:",maximum)
+    print("+----------------------------------------+")
+    print("Most expensive item:    ", '$%.2f' % expensive_items_list[maximum], "  Item:",maximum)
     print("Average cost per item:  ", '$%.2f' % average_cost_per_item)
     print("Total expenses:         ", '$%.2f' % total_expenses)
     print("Total tax deductible:   ", '$%.2f' % total_tax_deductible)    
- 
+    print("+----------------------------------------+")
 # Execute main() function
 if __name__ == '__main__':
     main()

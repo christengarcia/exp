@@ -1,4 +1,4 @@
-### Programming Task 1
+### Inventory Records
 
 This program allows the user to choose an unlimited number of items to be 
 recorded. It outputs the most expensive item, average cost per item, total 
